@@ -160,7 +160,6 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UITex
                 showText()
             })
         }
-        
         func showText()
         {
             UIView.animate(withDuration: 1, animations: {
@@ -172,14 +171,12 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UITex
                 })
             })
         }
-        
         func showBottomPart()
         {
             self.dictatebutton.alpha = 1
             self.sideBar.alpha = 1
             self.dataBar.alpha = 1
         }
-        
         speechRecognizer.delegate = self
         sideMenu.layer.shadowOpacity = 0.3
         rightMenu.layer.shadowOpacity = 0.3
@@ -206,14 +203,11 @@ public class ViewController: UIViewController, SFSpeechRecognizerDelegate, UITex
                     self.dictatebutton.setTitle("Speech recognition not yet authorized.", for: .disabled)
                 }
             }
-            
-            
         }
         if let previousWorkout = UserDefaults.standard.object(forKey: "workout") as? String
             {
                 output.text = previousWorkout
             }
-        
         if let lastWeight = UserDefaults.standard.object(forKey: "weight") as? String
         {
             weightOutput.text = lastWeight
